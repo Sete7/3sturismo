@@ -17,6 +17,12 @@
 .main_menu a{float: left; padding: 12px 16px; color: #333; font-size: 1.2em;}
 .main_menu a:hover{color: #e93439; text-decoration: underline;}
 
+.anime{opacity: 0; transform: translate3d( -50px, 0px, 0px);transition: 0.3s;}
+.anime-init{opacity: 1;transition: all 0.5s ease; transform: translate3d(0px, 0px ,0px);}
+
+/*---------------------- ACTIVE-MENU ---------------------------------------------*/
+
+
 /*SLIDER*/
 .slider{background: #333; position: relative; display: block;}
 .slider_controll{position: absolute; background: red; width: 100%; top: 50%;}
@@ -33,8 +39,9 @@
 
 
 .main-oferecer{margin-top: 35px; float: left; margin-bottom: 35px;}
-.row-oferecer{ width: calc(32% - 20px);  float: left; }
-.row-space{margin: 0 4%;}
+/*.row-oferecer{ width: calc(32% - 20px);  float: left; }*/
+.row-oferecer{ width: calc(33% - 20px); float: left;}
+.row-space{margin: 0 1.6%;}
 .row-thumb-text{width: 100%; float: left; background-color: #e93539; padding: 8px; min-height: 135px;}
 .row-thumb-text .thumb{width: 34%; float: left; background-color: #8e2023; border-radius: 8px;}
 .row-thumb-text .thumb img{padding: 15px;}
@@ -119,10 +126,10 @@
 .main_pacote{background: #d1f3ff;}
 .form-pacote h2{color: #575f5f;margin-bottom: 10px;}
 .form-pacote input{outline: none;}
-.sidebar{width: 20%;float: left;}
-.sidebar ul{padding-top: 25px;}
-.sidebar ul li a{color: #636c6d;line-height: 1.8;}
-.sidebar ul li a:hover{color: #575f5f;}
+.sidebar-search{width: 20%;float: left;}
+.sidebar-search ul{padding-top: 25px;}
+.sidebar-search ul li a{color: #636c6d;line-height: 1.8;}
+.sidebar-search ul li a:hover{color: #575f5f;}
 .sec-thumb-pacotes{width: 78%;float: left;margin-left: 2%;}
 .sec-thumb-pacotes h1{color: #575f5f;margin-bottom: 10px;}
 .row-pacotes{width: calc(33.33333333333333% - 20px); margin: 0 10px 100px 10px;float: left;}
@@ -138,6 +145,11 @@
 
 .row-pacotes .box-thumb-pac h1{color: #575f5f;  }
 .row-pacotes .box-thumb-pac h1:hover{color: #e93439;}
+
+.btn-carregar{width: 100%;}
+.btn-carregar .btn-carregar-mais{width: 50%; margin: 0 25%;text-align: center;background: #e93439;}
+.btn-carregar .btn-carregar-mais:hover{background: #995b5b;}
+
 @media(max-width: 1440px){
     .row-pacotes .box-thumb-pac .thumb-pacote .box-hover-pacotes{height: 192px; }
 }
@@ -154,7 +166,9 @@
     .row-pacotes .box-thumb-pac .thumb-pacote .box-hover-pacotes{height: 235px; }
 }
 
-
+@media(max-width: 1550px){
+    body{width: 100%; max-width: 1600px;}
+}
 
 @media(max-width: 1500px){
     .site{width: 100%;max-width: 1600px !important;}
@@ -164,14 +178,14 @@
 }
 
 @media(max-width: 1024px){
-    .sidebar{width: 25%}    
+    .sidebar-search{width: 25%}    
     .sec-thumb-pacotes{margin-left: 10px; width: 73%;}
     .row-pacotes a h1{font-size: 1.3em;}
     .row-pacotes{width: 45%; margin: 0 2.5%;}
 }
 
 @media(max-width: 800px){
-    .sidebar{width: 34%}    
+    .sidebar-search{width: 34%}    
     .sec-thumb-pacotes{margin-left: 10px; width: 64%;}
     .row-pacotes a h1{font-size: 2em;}
     .row-pacotes{width: 100%;}
@@ -179,7 +193,7 @@
 }
 
 @media(max-width: 651px){
-    .sidebar{width: 97%;margin-left: 3%;margin-bottom: 25px;}    
+    .sidebar-search{width: 97%;margin-left: 3%;margin-bottom: 25px;}    
     .sec-thumb-pacotes{margin-left: 10px; width: 100%;} 
     .row-pacotes{width: 100%;}
 }
@@ -375,7 +389,8 @@
     {
         position: absolute;
         top: 0;
-        right: -50px;
+        
+        right: -55px;
         width: 50px;
         height: 50px;
         box-sizing: border-box;
@@ -390,7 +405,7 @@
         display: block;
         width: 80%;
         height: 3px;
-        background: #fff;
+        background: #333;
         top: 24px;
         transition: .3s;    
         margin: 0 10%;
@@ -404,7 +419,7 @@
         width: 90%;
         height: 3px;
         left: 0;
-        background: #fff;
+        background: #333;
         transition: .3s;     
         margin: 0 5%;
     }
@@ -417,7 +432,7 @@
         width: 90%;
         height: 3px;
         left: 0;
-        background: #fff;
+        background: #333;
         transition: .3s;   
         margin: 0 5%;
     }

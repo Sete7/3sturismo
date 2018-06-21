@@ -86,7 +86,7 @@
     <div class="content">
         <h1 class="al-center">AS MELHORES OFERTAS VOCÊ ENCONTRA AQUI!</h1>
         <?php for ($i = 0; $i < 4; $i++): ?>                    
-            <article class="row-ofertas">
+            <article class="row-ofertas anime">
                 <a href="<?= HOME; ?>/pacotes">
                     <h1>PORTO SEGURO EM JANEIRO 2018</h1>
                     <img src="<?= REQUIRE_PATH; ?>/images/pacote/pac1.jpg" alt="">
@@ -111,7 +111,7 @@
          <?php
             for($i = 1; $i <=4; $i++){
         ?>
-        <article class="row-ofertas content">
+        <article class="row-ofertas content anime">
             <h1>DINHEIRO</h1>
             <img src="<?= REQUIRE_PATH; ?>/images/blog/d4.jpg" alt="">
             <p>Evite carregar notas de valores altos, leve um ou mais cartões de crédito internacionais. Traveller s cheques são seguros e bem aceitos, mas para trocar é necessária a apresentação do...</p>
@@ -131,7 +131,7 @@
     </div>
 
     <div class="sect-text">
-        <div class="quem-text">
+        <div class="quem-text anime">
             <h1>Quem Somos</h1>
             <p>A 3S Turismo é uma empresa líder no mercado há 20 anos,
                 que trabalha com seriedade e compromisso com o seu bem estar. 

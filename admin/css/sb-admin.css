@@ -1,0 +1,333 @@
+/*!
+ * Start Bootstrap - SB Admin (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+body {
+    margin-top: 100px;
+    background-color: #222;
+}
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+}
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 51px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        background-color: #222;
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #000 !important;
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #999;
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #fff;
+}
+
+/* Flot Chart Containers */
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Colored Panels */
+
+.huge {
+    font-size: 40px;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green > .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green > a {
+    color: #5cb85c;
+}
+
+.panel-green > a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red > .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red > a {
+    color: #d9534f;
+}
+
+.panel-red > a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow > .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow > a {
+    color: #f0ad4e;
+}
+
+.panel-yellow > a:hover {
+    color: #df8a13;
+}
+
+.bg-success{padding: 15px; margin-bottom: 10px;}
+.bg-info{padding: 15px; margin-bottom: 10px;}
+
+/*MENU E SUBMENU*/
+.menu_category .btn{
+    font-size: 0.7em;
+}
+
+.menu_category header{
+    padding: 15px;
+    background-color: #eee;
+    font-size: 1em;
+}
+
+
+.menu_category header i{
+    font-size: 1em;
+    font-weight: 300;
+    margin-right: 5px;
+    display: inline-block;
+}
+.menu_category header .menu_action{
+    padding-left: 15px;
+}
+.msg-error{
+    color: #ff3333;
+}
+.menu_category header span{
+    font-size: 1.2em;
+    color: #555;
+    margin-right: 8px;
+}
+
+.fa-eye{padding: 6px; background: #00b69a; color: #fff; border-radius: 8px;}
+.fa-pencil{padding: 6px; background: #006699; color: #fff; border-radius: 8px;}
+.fa-times-circle{padding: 6px; background: #990000; color: #fff; border-radius: 8px;}
+.fa-check{padding: 6px; background: #00b69a; color: #fff; border-radius: 8px;}
+.fa-times{padding: 6px; background: red; color: #fff; border-radius: 8px;}
+
+.menu_subcategory{
+    padding: 20px;
+    background: #fff;
+    border-bottom: 1px dotted #ccc;
+}
+
+.menu_subcategory i{
+    font-size: 1em;
+    font-weight: 300;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.menu_subcategory span{
+    font-size: 0.8em;
+    color: #555;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.imagem-post{width: 100%; height: 280px; float: left; overflow: hidden;}
+.imagem-post img{width: 100%;}
+.txtThumb{margin-top: 15px;}
+.alterImg{margin-top: 10px;}
+
+.min{width: 200px; padding: 10px;}
+
+.gallery ul{list-style: none; width: 880px; display: flex; margin: 100px auto;}
+.btn_excluir{position: absolute; bottom: 15px; right: 25px;}
+.box_img{margin-bottom: 15px;}
+
+.conteudo{margin: 20px 0;}
+ul.paginacao {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.paginacao li {display: inline;}
+
+ul.paginacao li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+ul.paginacao li a.active {
+    background-color: #fedc00;
+    color: black;
+    border: 1px solid #fedc00;
+}
+
+ul.paginacao li a:hover:not(.active) {background-color: #ddd;}
+
+.banner{width: 100%; background-color: #f4f4f4; float: left;}
+.banner:hover{background-color: #999; cursor: pointer;}
+.banner img{width: 15%; margin: 0.5%; float: left;}
+.banner .txt{float: left; width: 65%; margin: 0.5%;}
+.banner .txt h2{padding-left: 8px; text-transform: uppercase; font-size: 1.6em;}
+.banner .txt p{font-size: 1.2em; padding-left: 8px;}
+.banner .buttons{float: right; width: 17%; margin: 0.5%;}
+.banner .buttons p{font-size: 1.4em; text-align: center; margin-top: 15px; padding-bottom: 15px;}
+.banner .buttons .icones{margin-left: 55px }

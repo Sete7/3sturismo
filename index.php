@@ -39,11 +39,11 @@
                         <!------------------------------------------------------ MENU MOBI ------------------------------------------>
                         <div class="sidebar">                            
                             <ul class="menu_mobile"> 
-                                <li class="li_mobi"><a title="home" href="<?= HOME; ?>/index">Home</a></li>
-                                <li class="li_mobi"><a title="Quem Somos" href="<?= HOME; ?>/quem-somos">Quem Somos</a></li>
-                                <li class="li_mobi"><a title="Pacotes" href="<?= HOME; ?>/pacotes">Pacotes</a></li>
-                                <li class="li_mobi"><a title="Pacotes" href="<?= HOME; ?>/blog">Blog</a></li>
-                                <li class="li_mobi"><a title="Fale Conosco" href="<?= HOME; ?>/contato">Contato</a></li>
+                                <li><a title="Home" href="<?= HOME; ?>/index">Home</a></li>
+                                <li><a title="Quem Somos" href="<?= HOME; ?>/quem-somos">Quem Somos</a></li>
+                                <li><a title="Pacotes" href="<?= HOME; ?>/pacotes">Pacotes</a></li>
+                                <li><a title="Pacotes" href="<?= HOME; ?>/blog">Blog</a></li>
+                                <li><a title="Fale Conosco" href="<?= HOME; ?>/contato">Contato</a></li>
                             </ul>
                             <button class="sidebarBtn">
                                 <span></span>
@@ -53,14 +53,14 @@
                         <!------------------------------------------------------ MENU SITE ------------------------------------------>
 
                         <div class="main_menu">
-                            <ul>
+                            <ul class="navbar">
                                 <li><a title="home" href="<?= HOME; ?>/index">Home</a></li>
                                 <li><a title="Quem Somos" href="<?= HOME; ?>/quem-somos">Quem Somos</a></li>
                                 <li><a title="Pacotes" href="<?= HOME; ?>/pacotes">Pacotes</a></li>
                                 <li><a title="Pacotes" href="<?= HOME; ?>/blog">Blog</a></li>
                                 <li><a title="Fale Conosco" href="<?= HOME; ?>/contato">Contato</a></li>
                             </ul>
-                            
+
                             <div class="menu-icon">
                                 <span></span>
                                 <span></span>
@@ -144,36 +144,12 @@
             <div class="clear"></div>
         </div>
         <script src="<?= REQUIRE_PATH; ?>/js/jquery-3.2.1.min.js"></script>
-        <script src="themes/3sturismo/js/fontawesome.js" type="text/javascript"></script>
-        <script src="<?= REQUIRE_PATH; ?>/js/menu.js"></script>
+        <script src="<?= REQUIRE_PATH; ?>/js/fontawesome.js" type="text/javascript"></script>            
+        <script src="<?= REQUIRE_PATH; ?>/js/scriptSite.js"></script>
+
         <script>
-            $(document).ready(function () {
-                $(".menu-icon").click(function () {
-                    $(".menu-icon").toggleClass('active');
-                });
-                $(".menu-icon").click(function () {
-                    $(".sidebar").toggleClass('active');
-                });
-                $(".menu-icon").click(function () {
-                    $(".slider").toggleClass('active');
-                });
-                $(".menu-icon").click(function () {
-                    $(".shop").toggleClass('active');
-                });
-
-                $(".menu-cart").click(function () {
-                    $(".cart").toggleClass('ative');
-                });
-                $(".menu-cart").click(function () {
-                    $(".slider").toggleClass('ative');
-                });
-                $(".menu-cart").click(function () {
-                    $(".shop").toggleClass('ative');
-                });
-
-            });
-        </script>
-
+          
+        </script>        
 
     </body>
 </html>

@@ -5,7 +5,7 @@
     </div>
 
     <div class="content">
-        <div class="sidebar">
+        <div class="sidebar-search">
             <form class="form-pacote">
                 <h2>Buscar</h2>
                 <input type="text" placeholder="Pesquisar...">
@@ -24,7 +24,7 @@
             <?php
             for ($i = 0; $i <= 8; $i++) {
                 ?>
-                <article class="row-pacotes">
+                <article class="row-pacotes anime anime-init">
                     <a href="<?= HOME; ?>/single" class="box-thumb-pac">
                         <div class="thumb-pacote">
                             <img src="<?= REQUIRE_PATH; ?>/images/pacote/pac1.jpg">
@@ -39,7 +39,12 @@
                 <?php
             }
             ?>
-
+            
+            <!-------------------------------------- BOTAO CARREGAR MAIS PACOTES ----------------------------------->
+            <div class="btn-carregar">
+                <a href="#" class="btn btn-red btn-carregar-mais j_read">Carregar Mais</a>
+            </div>
+            
         </section>
     </div>
 </div>
