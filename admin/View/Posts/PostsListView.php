@@ -21,10 +21,6 @@ $quantidade = 6;
 $inicio = ($pg * $quantidade) - $quantidade;
 $listaPost = $postController->ListaTodoPost($inicio, $quantidade);
 
- 
-
-
-
 ?>
 
 <div id="page-wrapper">

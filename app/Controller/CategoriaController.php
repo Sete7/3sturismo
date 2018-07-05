@@ -5,52 +5,43 @@
  *
  * @author Telmo
  */
-
 if (file_exists("../DAL/categoriaDAO.php")) {
     require_once("../DAL/categoriaDAO.php");
 } elseif (file_exists("DAL/categoriaDAO.php")) {
     require_once("DAL/categoriaDAO.php");
 }
 
-
 class CategoriaController {
-    
+
     private $categoriaDao;
-    
+
     public function __construct() {
         $this->categoriaDao = new categoriaDAO();
     }
-    
+
+//    -------------------------------CADASTRAR-------------------------------------------
     public function Cadastrar(Categoria $categoria) {
-        return $this->categoriaDao->Cadastrar($categoria);
+        if (strlen($categoria->getTitulo()) >= 4 && $categoria->getStatus() >= 1 && $categoria->getStatus() <= 2):
+            return $this->categoriaDao->Cadastrar($categoria);
+        else:
+            return FALSE;
+        endif;
     }
-    public function Alterar(Categoria $categoria) {
-        return $this->categoriaDao->Alterar($categoria);
-    }
-    
-    public function RetornoCategoriaResumida() {
-        return $this->categoriaDao->RetornoCategoriaResumida();
-    }
-    
-    public function RetornoSubCategResumida($parent) {
-        return $this->categoriaDao->RetornoSubCategResumida($parent);
-    }
-    
-   public function RetornoCateg($parent){
-        return $this->categoriaDao->RetornoCateg($parent);
-    }
-    public function RetornoSubcat($cod, $parent){
-        return $this->categoriaDao->RetornoSubcat($cod, $parent);
+
+//    -----------------------------LISTAGEM DE CATEGORIA--------------------------------
+   public function ListarCategoria($inicio = null, $quantidade = null) {
+       return $this->categoriaDao->ListarCategoria($inicio, $quantidade);
+   }
+   
+    public function Atualizar(Categoria $categoria) {
+        return $this->categoriaDao->Atualizar($categoria);
     }
     
-    public function VerificaMenu($nome){
-        return $this->categoriaDao->VerificaMenu($nome);
-    }
-    public function ListaCategoria() {
-        return $this->categoriaDao->ListaCategoria();
-    }
-     public function RetornoCategoria($cod){
-        return $this->categoriaDao->RetornoCategoria($cod);
+    public function retornaCategoria($cod) {
+        return $this->categoriaDao->retornaCategoria($cod);
     }
     
+     public function Excluir($cod){
+         return $this->categoriaDao->Excluir($cod);
+     }
 }

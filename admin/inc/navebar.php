@@ -19,13 +19,13 @@
 
 
         <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#slider"><i class="fa fa-cog"></i> Slider <i class="fa fa-fw fa-caret-down"></i></a>
+            <a href="javascript:;" data-toggle="collapse" data-target="#slider"><i class="fa fa-indent"></i> Categoria <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="slider" class="collapse">
                 <li>
-                    <a href="?pagina=manterslider"><i class="fa fa-fw fa fa-list-alt"></i> Gerenciar Slider</a>
+                    <a href="?pagina=categoria"><i class="fa fa-fw fa fa-list-alt"></i> Editar Categoria</a>
                 </li>
                 <li>
-                    <a href="?pagina=slider"><i class="fa fa-fw fa-floppy-o"></i> Novo Slider</a>
+                    <a href="?pagina=listarCategoria"><i class="fa fa-fw fa-floppy-o"></i> Listar Categoria</a>
                 </li>
             </ul>
         </li>
@@ -54,7 +54,19 @@
                      <a href="?pagina=manterArtigos"><i class="fa fa-fw fa fa-list-alt"></i> Gerenciar Artigos</a>
                 </li>
             </ul>
-        </li>        
+        </li>  
+        
+        <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#slider"><i class="fa fa-cog"></i> Slider <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="slider" class="collapse">
+                <li>
+                    <a href="?pagina=manterslider"><i class="fa fa-fw fa fa-list-alt"></i> Gerenciar Slider</a>
+                </li>
+                <li>
+                    <a href="?pagina=slider"><i class="fa fa-fw fa-floppy-o"></i> Novo Slider</a>
+                </li>
+            </ul>
+        </li>
         
         <li>
             <a href="?pagina=usuarios"><i class="fa fa-fw fa-user"></i> Gerencia </a>

@@ -8,8 +8,13 @@ $pagina = filter_input(INPUT_GET, "pagina", FILTER_SANITIZE_STRING);
 $arrayPaginas = array(
     "home" => "View/home.php",
     "usuarios" => "View/Admin/AdminView.php",
-//    "menus" => "View/Menus/MenusView.php",
-//    "manterMenus" => "View/Menus/GerenciarMenu.php",
+    "menus" => "View/Menus/MenusView.php",
+    "manterMenus" => "View/Menus/GerenciarMenu.php",
+    "categoria" => "View/Categoria/categoria.php",
+    "listarCategoria" => "View/Categoria/listarCategoria.php",
+    "atualizar" => "View/Categoria/atualizarCategoria.php",
+    
+    
     "posts" => "View/Posts/PostsView.php",
     "manterPosts" => "View/Posts/PostsListView.php",
     "updatePosts" => "View/Posts/PostsUpdateView.php",

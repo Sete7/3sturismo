@@ -13,22 +13,16 @@
  */
 class Categoria {
     private $cod;
-    private $nome;
-    private $parent;
-    private $url;
-    private $descricao;
-    private $status;
+    private $titulo;    
+    private $url;   
+    private $status;  
     
     function getCod() {
         return $this->cod;
     }
 
-    function getNome() {
-        return $this->nome;
-    }
-
-    function getParent() {
-        return $this->parent;
+    function getTitulo() {
+        return $this->titulo;
     }
 
     function getUrl() {
@@ -43,12 +37,8 @@ class Categoria {
         $this->cod = $cod;
     }
 
-    function setNome($nome) {
-        $this->nome = $nome;
-    }
-
-    function setParent($parent) {
-        $this->parent = $parent;
+    function setTitulo($titulo) {
+        $this->titulo = $titulo;
     }
 
     function setUrl($url) {
@@ -57,16 +47,5 @@ class Categoria {
 
     function setStatus($status) {
         $this->status = $status;
-    }
-
-    function getDescricao() {
-        return $this->descricao;
-    }
-
-    function setDescricao($descricao) {
-        $this->descricao = $descricao;
-    }
-
-    
-    
+    }  
 }

@@ -55,6 +55,8 @@ if ($btnAlterar):
     $artigo->setChaves(filter_input(INPUT_POST, "txtPalavras", FILTER_SANITIZE_STRING));
     $artigo->setStatus(filter_input(INPUT_POST, "slStatus", FILTER_SANITIZE_NUMBER_INT));
     
+    
+    
     //alterar
     if($artigoController->Alterar($artigo)):
          $resultado = "<div class=\"alert alert-success\">O Artigo <b>{$artigo->getTitulo()}</b> foi alterado com sucesso</div>";

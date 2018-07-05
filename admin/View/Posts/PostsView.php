@@ -7,59 +7,60 @@
 //require_once '../Model/Post.php';
 
 //instanciando os objetos
-$categoriaController = new CategoriaController();
-$postController = new PostController();
-$helper = new Helper();
-$upload = new Upload();
 
-$titulo = "";
-$palavras = "";
-$status = 2;
-$resultado = "";
-
-if(filter_input(INPUT_POST, "btnCadastrar", FILTER_SANITIZE_STRING)):
-    $post = new Post();
-    $post->setCod(filter_input(INPUT_GET, "cod", FILTER_SANITIZE_NUMBER_INT));    
-    $post->setTitulo(filter_input(INPUT_POST, "txtTitulo", FILTER_SANITIZE_STRING));    
-    //criando a url do post
-    $url = $helper->Name($post->getTitulo());
-    $post->setUrl($url);    
-    
-    //upload da imagem
-    $imagem = $_FILES['imagem'];        
-    $upload->Image($imagem);
-    $nomeImagem = $upload->getResult();
-    //recebendo o nome da imagem
-    $post->setThumb($nomeImagem);
-    
-    $textFormatado = htmlentities($_POST['txtDescricao'], ENT_QUOTES);
-    $post->setDescricao($textFormatado);  
-    
-    
-    //convertendo a data para y-m-d
-    $novaData = $helper->converteData(filter_input(INPUT_POST, "txtData", FILTER_SANITIZE_STRING));
-    $post->setData($novaData);    
-    $post->setPalavras(filter_input(INPUT_POST, "txtKey", FILTER_SANITIZE_STRING));
-    $post->setStatus(filter_input(INPUT_POST, "slStatus", FILTER_SANITIZE_NUMBER_INT));
-    $post->getCategoria()->setCod(filter_input(INPUT_POST, "slCategoria", FILTER_SANITIZE_NUMBER_INT));
-    $post->getUsuario()->setCod($_SESSION["cod"]);
+//$categoriaController = new CategoriaController();
+//$postController = new PostController();
+//$helper = new Helper();
+//$upload = new Upload();
+//
+//$titulo = "";
+//$palavras = "";
+//$status = 2;
+//$resultado = "";
+//
+//if(filter_input(INPUT_POST, "btnCadastrar", FILTER_SANITIZE_STRING)):
+//    $post = new Post();
+//    $post->setCod(filter_input(INPUT_GET, "cod", FILTER_SANITIZE_NUMBER_INT));    
+//    $post->setTitulo(filter_input(INPUT_POST, "txtTitulo", FILTER_SANITIZE_STRING));    
+//    //criando a url do post
+//    $url = $helper->Name($post->getTitulo());
+//    $post->setUrl($url);    
+//    
+//    //upload da imagem
+//    $imagem = $_FILES['imagem'];        
+//    $upload->Image($imagem);
+//    $nomeImagem = $upload->getResult();
+//    //recebendo o nome da imagem
+//    $post->setThumb($nomeImagem);
+//    
+//    $textFormatado = htmlentities($_POST['txtDescricao'], ENT_QUOTES);
+//    $post->setDescricao($textFormatado);  
+//    
+//    
+//    //convertendo a data para y-m-d
+//    $novaData = $helper->converteData(filter_input(INPUT_POST, "txtData", FILTER_SANITIZE_STRING));
+//    $post->setData($novaData);    
+//    $post->setPalavras(filter_input(INPUT_POST, "txtKey", FILTER_SANITIZE_STRING));
+//    $post->setStatus(filter_input(INPUT_POST, "slStatus", FILTER_SANITIZE_NUMBER_INT));
+//    $post->getCategoria()->setCod(filter_input(INPUT_POST, "slCategoria", FILTER_SANITIZE_NUMBER_INT));
+//    $post->getUsuario()->setCod($_SESSION["cod"]);
     
      //cadastrar     
-    if (!filter_input(INPUT_GET, "cod", FILTER_SANITIZE_NUMBER_INT)):
-        //cadastrar     
-       if ($postController->Cadastrar($post)):
-            echo "<script>document.location='?pagina=manterPosts';</script>";
-        else:
-            $resultado = "<div class=\"alert alert-danger\">Erro ao cadastrar </div>";
-        endif;
-    else:
-    //editar
-    
-    endif;
-    
-endif;
-
-$listaCategoria = $categoriaController->RetornoCategoriaResumida();
+//    if (!filter_input(INPUT_GET, "cod", FILTER_SANITIZE_NUMBER_INT)):
+//        //cadastrar     
+//       if ($postController->Cadastrar($post)):
+//            echo "<script>document.location='?pagina=manterPosts';</script>";
+//        else:
+//            $resultado = "<div class=\"alert alert-danger\">Erro ao cadastrar </div>";
+//        endif;
+//    else:
+//    //editar
+//    
+//    endif;
+//    
+//endif;
+//
+//$listaCategoria = $categoriaController->RetornoCategoriaResumida();
 
 ?>
 
